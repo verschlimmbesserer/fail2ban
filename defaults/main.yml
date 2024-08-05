@@ -1,0 +1,12 @@
+---
+# defaults file for fail2ban
+
+fail2ban_jaild_configs:
+  sshd: # section in the file for sshd
+    enabled: true # --> enabled = true
+    port: "ssh"
+    logpath: "%(sshd_log)s"
+    backend: "%(sshd_backend)s"
+    filter: sshd
+    # logpath: /var/log/auth.log
+    maxretry: 3
